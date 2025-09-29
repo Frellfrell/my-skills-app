@@ -1,0 +1,45 @@
+import { useState } from 'react'
+import './App.css'
+import QuestionnaireApp from "./apps/QuestionnaireApp/QuestionnaireApp";
+import questionnaireStore from "./apps/QuestionnaireApp/redux/store";
+import { Provider } from "react-redux";
+
+function App() {
+const [activeApp, setActiveApp] = useState("questionnaireStore");
+
+const renderApp = () => {
+    switch (activeApp) {
+      case "questionnaireStore":
+        return (
+         <Provider store={questionnaireStore}>
+          <QuestionnaireApp />
+         </Provider>
+        );
+     
+        
+
+        default:
+        return <p>Select an app to view</p>;
+    }
+  };
+
+   return (
+    <div className="App">
+      <label htmlFor="app-select" className="app-label">Choose an app: </label>
+
+<select
+        id="app-select"
+        value={activeApp}
+        onChange={(e) => setActiveApp(e.target.value)}
+        className="app-select"
+      >
+        <option value="">---</option>
+        <option value="questionnaire">📝 Questionnaire App</option>
+        </select>
+
+      {renderApp()}
+    </div>
+  );
+}
+
+export default App
