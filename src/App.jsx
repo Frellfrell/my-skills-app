@@ -5,7 +5,7 @@ import questionnaireStore from "./apps/QuestionnaireApp/redux/store";
 import { Provider } from "react-redux";
 
 function App() {
-const [activeApp, setActiveApp] = useState("questionnaireStore");
+const [activeApp, setActiveApp] = useState("");
 
 const renderApp = () => {
     switch (activeApp) {
@@ -34,7 +34,7 @@ const renderApp = () => {
         className="app-select"
       >
         <option value="">---</option>
-        <option value="questionnaire">📝 Questionnaire App</option>
+        <option value="questionnaireStore">📝 Questionnaire App</option>
         </select>
 
       {renderApp()}
