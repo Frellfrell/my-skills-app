@@ -41,7 +41,7 @@ return (
 <div className={styles.author}>— {author || "Неизвестен"}</div>
 <div className={styles.controls}>
 <Button variant="contained" className={styles.button} onClick={handleNewQuote}>
-Новая цитата
+New Quote
 </Button>
 </div>
 </div>
