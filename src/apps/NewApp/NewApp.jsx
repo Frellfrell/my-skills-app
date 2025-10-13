@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
-import Profile from './components/Profile';
+import File from './components/Profile';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const NewApp = () => {
