@@ -27,4 +27,4 @@ const Profile = ({ namespace }) => {
   );
 };
 
-export default Profile;
+export default File;
