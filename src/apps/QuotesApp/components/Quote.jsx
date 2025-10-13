@@ -10,12 +10,12 @@ const { text, author, status, error } = useSelector((state) => state.quote);
 
 
 useEffect(() => {
-dispatch(fetchRandomQuote());
+dispatch(fetchRandomQuote());// Загружаем цитату при монтировании компонента
 }, [dispatch]);
 
 
 const handleNewQuote = () => {
-dispatch(fetchRandomQuote());
+dispatch(fetchRandomQuote());// Загружаем новую цитату
 };
 
 
