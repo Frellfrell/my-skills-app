@@ -6,6 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 
 const NewApp = () => {
+  console.log("NewApp component is rendering!"); 
   const namespace = 'newapp'; // Уникальный namespace для этого приложения
 
   return (
