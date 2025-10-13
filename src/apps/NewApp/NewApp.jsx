@@ -9,7 +9,7 @@ const NewApp = () => {
   const namespace = 'newapp'; // Уникальный namespace для этого приложения
 
   return (
-    <div>
+    <div style={{ border: '2px solid red' }}>
       <h2>New App</h2>
     <BrowserRouter>
       <Routes>
