@@ -17,9 +17,15 @@ const NewApp = () => {
         <BrowserRouter>
           <Routes>
              <Route path="/login" element={<Login namespace={namespace} />} />
-          <Route path="/file" element={<File namespace={namespace} />} />
-          <Route path="*" element={<Login namespace={namespace} />} /> 
-            
+
+           <Route
+              path="/file"
+              element={
+                <ProtectedRoute namespace={namespace}>
+                  <File namespace={namespace} />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </Container>
