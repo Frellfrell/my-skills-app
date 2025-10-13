@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Login from './components/Login';
 import File from './components/File';
-import { CssBaseline, Container } from '@mui/material';
+import { CssBaseline, Container, Paper, Typography } from '@mui/material';
 import  store  from './redux/store';
 
 
