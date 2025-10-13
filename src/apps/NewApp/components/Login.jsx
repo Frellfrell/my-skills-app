@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { saveToken } from '../utils/auth'; // Утилита для работы с токенами
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, Stack, Box, Typography } from '@mui/material';
 
 const Login = ({ namespace }) => {
   const [username, setUsername] = useState('');
