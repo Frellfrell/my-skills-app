@@ -1,15 +1,24 @@
-import { LOGOUT } from './actions';
+import { createSlice } from '@reduxjs/toolkit';
 
+// Начальное состояние
 const initialState = {
   user: null,
   token: null,
 };
 
-export default function authReducer(state = initialState, action) {
-  switch (action.type) {
-    case LOGOUT:
-      return { ...initialState };
-    default:
-      return state;
-  }
-}
+// Создание слайса для авторизации
+const authSlice = createSlice({
+  name: 'auth',
+  initialState,
+  reducers: {
+    logout: () => {
+      return initialState; // сбрасываем состояние при логауте
+    },
+  },
+});
+
+// Экспортируем действия
+export const { logout } = authSlice.actions;
+
+// Экспортируем редьюсер
+export default authSlice.reducer;
