@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRandomQuote } from "../redux/quoteSlice";
 import styles from "../styles/Quote.module.css";
+import { Button } from "@mui/material";
 
 
 const Quote = () => {
@@ -39,9 +40,9 @@ return (
 <blockquote className={styles.quote}>“{text}”</blockquote>
 <div className={styles.author}>— {author || "Неизвестен"}</div>
 <div className={styles.controls}>
-<button className={styles.button} onClick={handleNewQuote}>
+<Button variant="contained" className={styles.button} onClick={handleNewQuote}>
 Новая цитата
-</button>
+</Button>
 </div>
 </div>
 )}
