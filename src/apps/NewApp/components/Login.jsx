@@ -16,13 +16,15 @@ const Login = ({ namespace }) => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <Box textAlign="center">
+      <Typography variant="h5" gutterBottom color="primary">Login  </Typography>
+       <Stack spacing={2} alignItems="center">
       <TextField
         label="Username"
         variant="outlined"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+         fullWidth
       />
       <TextField
         label="Password"
@@ -30,9 +32,12 @@ const Login = ({ namespace }) => {
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+         fullWidth
       />
-      <Button onClick={handleLogin} variant="contained">Login</Button>
-    </div>
+      <Button onClick={handleLogin} variant="contained" color="primary"
+          sx={{ mt: 2, width: '100%' }}>Login</Button>
+    </Stack>
+     </Box>
   );
 };
 
