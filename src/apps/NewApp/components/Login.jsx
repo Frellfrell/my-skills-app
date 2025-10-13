@@ -11,7 +11,7 @@ const Login = ({ namespace }) => {
     
     const token = 'fake_token'; //  получения токена
     saveToken(namespace, token); // Сохраняем токен
-    navigate('/profile'); // Переходим на страницу профиля
+    navigate('/file'); // Переходим на страницу профиля
   };
 
   return (
