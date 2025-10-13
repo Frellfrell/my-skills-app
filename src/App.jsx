@@ -5,7 +5,6 @@ import questionnaireStore from "./apps/QuestionnaireApp/redux/store";
 import { Provider } from "react-redux";
 import quotesStore from  "./apps/QuotesApp/redux/store";
 import QuotesApp from './apps/QuotesApp/QuotesApp';
-import store from './apps/QuestionnaireApp/redux/store';
 import NewApp from './apps/NewApp/NewApp';
 
 
@@ -26,12 +25,8 @@ const renderApp = () => {
           <QuotesApp />
         </Provider>
       );
-      case "NewApp":
-        return (
-          <Provider store={store}> 
-            <NewApp />
-          </Provider>
-        );
+      case "newpp":
+        return <NewApp />;
         
 
         default:
@@ -52,7 +47,7 @@ const renderApp = () => {
         <option value="">---</option>
         <option value="questionnaireStore">📝 Questionnaire App</option>
         <option value="quotesStore">💬 Quotes App</option>
-        <option value="NewApp">💡 New App</option>
+        <option value="newApp">💡 New App</option>
         </select>
        
       {renderApp()}
