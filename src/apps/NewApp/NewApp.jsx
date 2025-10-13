@@ -12,8 +12,9 @@ const NewApp = () => {
   return (
     <div style={{ border: '2px solid red' }}>
       <h2>New App</h2>
-   
+    <BrowserRouter>
       <Routes>
+        <Route path="/" element={<h2>Welcome to NewApp!</h2>} />
         <Route path="/login" element={<Login namespace={namespace} />} />
         <Route
           path="/file"
@@ -24,7 +25,7 @@ const NewApp = () => {
           }
         />
       </Routes>
-   
+    </BrowserRouter>
     </div>
   );
 };
