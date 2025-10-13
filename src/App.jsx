@@ -7,7 +7,7 @@ import quotesStore from  "./apps/QuotesApp/redux/store";
 import QuotesApp from './apps/QuotesApp/QuotesApp';
 import store from './apps/QuestionnaireApp/redux/store';
 import NewApp from './apps/NewApp/NewApp';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
 const [activeApp, setActiveApp] = useState("");
@@ -54,14 +54,9 @@ const renderApp = () => {
         <option value="quotesStore">💬 Quotes App</option>
         <option value="NewApp">💡 New App</option>
         </select>
-         <BrowserRouter> {/* Главное приложение оборачиваем в BrowserRouter */}
-        <Routes>
-          <Route path="/" element={<p>Select an app to view</p>} />
-          <Route path="/newapp/*" element={<NewApp />} /> {/* Новый рут для NewApp */}
-        </Routes>
-
+       
       {renderApp()}
-      </BrowserRouter>
+    
     </div>
   );
 }
