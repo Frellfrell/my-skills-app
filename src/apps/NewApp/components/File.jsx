@@ -13,7 +13,7 @@ const File = ({ namespace }) => {
 
     // Диспатчим экшн для очистки состояния пользователя в Redux
     dispatch(logout());
-    
+
     // Удаляем токен для текущего приложения из localStorage
     removeToken(namespace);
 
@@ -22,10 +22,15 @@ const File = ({ namespace }) => {
   };
 
   return (
-    <div>
-      <h2>Profile Page</h2>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
+    <Box textAlign="center">
+      <Typography variant="h5" gutterBottom color="secondary">Profile Page</Typography>
+      <Button
+        onClick={handleLogout}
+        variant="outlined"
+        color="error"
+        sx={{ mt: 2 }}
+      >Exit </Button>
+    </Box>
   );
 };
 
