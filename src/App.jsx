@@ -50,7 +50,7 @@ const renderApp = () => {
         <option value="">---</option>
         <option value="questionnaireStore">📝 Questionnaire App</option>
         <option value="quotesStore">💬 Quotes App</option>
-        <option value="newApp">💡 New App</option>
+        <option value="newapp">💡 New App</option>
         </select>
        
       {renderApp()}
