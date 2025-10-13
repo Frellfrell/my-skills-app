@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { saveToken } from '../utils/auth'; // Утилита для работы с токенами
+import { Button, TextField } from '@mui/material';
 
 const Login = ({ namespace }) => {
   const [username, setUsername] = useState('');
@@ -17,19 +18,20 @@ const Login = ({ namespace }) => {
   return (
     <div>
       <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="Username"
+      <TextField
+        label="Username"
+        variant="outlined"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <input
+      <TextField
+        label="Password"
+        variant="outlined"
         type="password"
-        placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Login</button>
+      <Button onClick={handleLogin} variant="contained">Login</Button>
     </div>
   );
 };
