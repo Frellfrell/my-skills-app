@@ -6,9 +6,10 @@ export const fetchRandomQuote = createAsyncThunk(
   "quote/fetchRandomQuote",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get("https://dummyjson.com/quotes/random");
-      // API возвращает объект { id, quote, author }
-      return response.data;
+      const response = await axios.get("https://zenquotes.io/api/random");
+     // Извлекаем цитату из первого элемента массива
+      const quoteData = response.data[0];
+      return { quote: quoteData.q, author: quoteData.a };  // возвращаем объект с цитатой и автором
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
     }
@@ -18,7 +19,7 @@ export const fetchRandomQuote = createAsyncThunk(
 const initialState = {
   text: "",
   author: "",
-  status: "idle", // 'idle' | 'loading' | 'succeeded' | 'failed'
+  status: "idle", // Статус загрузки: 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
 };
 
