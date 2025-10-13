@@ -29,7 +29,7 @@ const File = ({ namespace }) => {
         onClick={handleLogout}
         variant="outlined"
         color="error"
-        sx={{ mt: 2 }}
+        sx={{ mt: 4 }}
       >Login </Button>
     </Box>
   );
