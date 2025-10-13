@@ -3,6 +3,7 @@ import './App.css'
 import QuestionnaireApp from "./apps/QuestionnaireApp/QuestionnaireApp";
 import questionnaireStore from "./apps/QuestionnaireApp/redux/store";
 import { Provider } from "react-redux";
+import quotesStore from  "./apps/QuotesApp/redux/store";
 
 function App() {
 const [activeApp, setActiveApp] = useState("");
