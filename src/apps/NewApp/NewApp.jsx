@@ -7,7 +7,7 @@ import { CssBaseline, Container } from '@mui/material';
 
 const NewApp = () => {
   console.log("NewApp component is rendering!"); 
-  
+  const namespace = 'newapp';
 
   return (
     <div style={{ border: '2px solid red' }}>
@@ -16,8 +16,9 @@ const NewApp = () => {
       <Container maxWidth="sm">
         <BrowserRouter>
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/file" element={<File />} />
+             <Route path="/login" element={<Login namespace={namespace} />} />
+          <Route path="/file" element={<File namespace={namespace} />} />
+          <Route path="*" element={<Login namespace={namespace} />} /> 
             
           </Routes>
         </BrowserRouter>
