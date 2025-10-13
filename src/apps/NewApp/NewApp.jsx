@@ -3,13 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import File from './components/File';
 import ProtectedRoute from './components/ProtectedRoute';
-import { useEffect } from 'react';
+
 
 const NewApp = () => {
   const namespace = 'newapp'; // Уникальный namespace для этого приложения
-useEffect(() => {
-  console.log("NewApp is rendering");
-}, []);
+
   return (
     <BrowserRouter>
       <Routes>
