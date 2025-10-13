@@ -6,6 +6,7 @@ const QuotesApp = () => {
   return (
     <div className={styles.wrap}>
       <h1 className={styles.title}>Quotes App</h1>
+      <p className={styles.subtitle}>Источник: dummyjson.com</p>
       <Quote />
     </div>
   );
