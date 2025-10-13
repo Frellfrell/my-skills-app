@@ -9,11 +9,13 @@ const File = ({ namespace }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Удаляем токен для текущего приложения из localStorage
-    removeToken(namespace);
+    
 
     // Диспатчим экшн для очистки состояния пользователя в Redux
     dispatch(logout());
+    
+    // Удаляем токен для текущего приложения из localStorage
+    removeToken(namespace);
 
     // Перенаправляем на страницу логина
     navigate('/login');
