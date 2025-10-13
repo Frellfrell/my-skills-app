@@ -15,7 +15,12 @@ const renderApp = () => {
           <QuestionnaireApp />
          </Provider>
         );
-     
+       case "quotesStore":
+      return (
+        <Provider store={quotesStore}>
+          <QuotesApp />
+        </Provider>
+      );
         
 
         default:
@@ -35,6 +40,7 @@ const renderApp = () => {
       >
         <option value="">---</option>
         <option value="questionnaireStore">📝 Questionnaire App</option>
+        <option value="quotesStore">💬 Quotes App</option>
         </select>
 
       {renderApp()}
