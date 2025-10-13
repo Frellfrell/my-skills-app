@@ -15,7 +15,7 @@ const NewApp = () => {
           path="/profile"
           element={
             <ProtectedRoute namespace={namespace}>
-              <Profile namespace={namespace} />
+              <File namespace={namespace} />
             </ProtectedRoute>
           }
         />
