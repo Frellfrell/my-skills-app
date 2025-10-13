@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { removeToken } from '../utils/auth'; // Утилита для работы с токенами
 import { logout } from '../redux/actions'; // Экшн для очистки данных пользователя
+import { Box, Typography,Button } from '@mui/material';
 
 const File = ({ namespace }) => {
   const dispatch = useDispatch();
