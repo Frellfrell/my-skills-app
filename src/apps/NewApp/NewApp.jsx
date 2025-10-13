@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import Login from './components/Login';
 import File from './components/File';
 import { CssBaseline, Container } from '@mui/material';
-import store from './redux/store';
+import { store } from './redux/store';
 
 
 const NewApp = () => {
