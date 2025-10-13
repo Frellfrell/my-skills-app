@@ -27,6 +27,7 @@ const renderApp = () => {
         </Provider>
       );
       case "newapp":
+        console.log("Rendering NewApp now");
         return <NewApp />;
         
 
