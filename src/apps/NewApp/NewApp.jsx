@@ -11,7 +11,7 @@ useEffect(() => {
   console.log("NewApp is rendering");
 }, []);
   return (
-    <BrowserRouter>
+    
       <Routes>
         <Route path="/login" element={<Login namespace={namespace} />} />
         <Route
@@ -23,7 +23,7 @@ useEffect(() => {
           }
         />
       </Routes>
-    </BrowserRouter>
+    
   );
 };
 
