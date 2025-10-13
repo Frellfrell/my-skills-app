@@ -15,7 +15,7 @@ const NewApp = () => {
      <Provider store={store}>
     
       <h2>New App</h2>
-    <CssBaseline /> {/* Это для глобальных стилей Material UI */}
+    <CssBaseline /> {/* Это для  стилей Material UI */}
       <Container maxWidth="sm"  sx={{
           mt: 6, // отступ сверху, чтобы отделить от выпадающего списка
           mb: 6,
