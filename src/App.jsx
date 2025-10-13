@@ -4,6 +4,7 @@ import QuestionnaireApp from "./apps/QuestionnaireApp/QuestionnaireApp";
 import questionnaireStore from "./apps/QuestionnaireApp/redux/store";
 import { Provider } from "react-redux";
 import quotesStore from  "./apps/QuotesApp/redux/store";
+import QuotesApp from './apps/QuotesApp/QuotesApp';
 
 function App() {
 const [activeApp, setActiveApp] = useState("");
