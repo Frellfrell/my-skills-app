@@ -13,10 +13,31 @@ const NewApp = () => {
 
   return (
      <Provider store={store}>
-    <div style={{ border: '2px solid red' }}>
+    
       <h2>New App</h2>
     <CssBaseline /> {/* Это для глобальных стилей Material UI */}
-      <Container maxWidth="sm">
+      <Container maxWidth="sm"  sx={{
+          mt: 6, // отступ сверху, чтобы отделить от выпадающего списка
+          mb: 6,
+        }}
+      >
+        <Paper
+          elevation={4}
+          sx={{
+            p: 4,
+            borderRadius: 3,
+            background: 'linear-gradient(135deg, #e3f2fd, #fce4ec)',
+          }}
+        >
+          <Typography
+            variant="h4"
+            align="center"
+            gutterBottom
+            sx={{ fontWeight: 'bold', color: '#1565c0' }}
+          >
+            🌟 New App
+          </Typography>
+
          <BrowserRouter basename="/my-skills-app">
           <Routes>
             <Route path="/" element={<Navigate to="/login" replace />} />
@@ -24,8 +45,9 @@ const NewApp = () => {
             <Route path="/file" element={<File namespace={namespace} />} />
           </Routes>
         </BrowserRouter>
+         </Paper>
       </Container>
-    </div>
+    
     </Provider>
   );
 };
