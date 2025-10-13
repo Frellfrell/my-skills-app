@@ -26,6 +26,7 @@ const renderApp = () => {
           <QuotesApp />
         </Provider>
       );
+      
       case "newapp":
         console.log("Rendering NewApp now");
         return <NewApp />;
