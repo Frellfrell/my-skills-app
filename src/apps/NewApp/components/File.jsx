@@ -30,7 +30,7 @@ const File = ({ namespace }) => {
         variant="outlined"
         color="error"
         sx={{ mt: 2 }}
-      >Exit </Button>
+      >Login </Button>
     </Box>
   );
 };
