@@ -10,6 +10,7 @@ import NewApp from './apps/NewApp/NewApp';
 
 function App() {
 const [activeApp, setActiveApp] = useState("");
+ console.log("Active App: ", activeApp); 
 
 const renderApp = () => {
     switch (activeApp) {
@@ -25,7 +26,7 @@ const renderApp = () => {
           <QuotesApp />
         </Provider>
       );
-      case "newpp":
+      case "newapp":
         return <NewApp />;
         
 
