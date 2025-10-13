@@ -8,7 +8,7 @@ const NewApp = () => {
   const namespace = 'newapp'; // Уникальный namespace для этого приложения
 
   return (
-    <BrowserRouter>
+ 
       <Routes>
         <Route path="/login" element={<Login namespace={namespace} />} />
         <Route
@@ -20,7 +20,7 @@ const NewApp = () => {
           }
         />
       </Routes>
-    </BrowserRouter>
+   
   );
 };
 
